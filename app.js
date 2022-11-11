@@ -29,11 +29,11 @@ scheduler.schedule("*/15 * * * *", async function () {
   }
 });
 
-scheduler.schedule("*/1 * * * * ", async function () {
+scheduler.schedule("*/59 * * * *", async function () {
   console.log("---------------------");
   console.log("Sending health check");
 
-  await axios.get(TELEGRAM_BOT_LINK + 'Я жив: ' + new Date().toISOString().slice(0, 10));
+  await axios.get(TELEGRAM_BOT_LINK + 'Я жив: ' + new Date().toISOString());
 });
 
 app.listen(3000, () => {
