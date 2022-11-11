@@ -29,7 +29,7 @@ scheduler.schedule("*/15 * * * *", async function () {
   }
 });
 
-scheduler.schedule("0 59 23 * * *", async function () {
+scheduler.schedule("*/1 * * * * ", async function () {
   console.log("---------------------");
   console.log("Sending health check");
 
