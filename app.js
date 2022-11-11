@@ -36,7 +36,7 @@ scheduler.schedule("0 59 23 * * *", async function () {
   await axios.get(TELEGRAM_BOT_LINK + 'Я жив: ' + new Date().toISOString().slice(0, 10));
 });
 
-scheduler.schedule("0 0 12 * * *", async function () {
+scheduler.schedule("*/30 * * * * *", async function () {
   console.log("---------------------");
   console.log("Sending health check");
 
